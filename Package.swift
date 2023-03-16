@@ -12,7 +12,7 @@ let package = Package(
             name: "ActionsErrorDemoTests",
             dependencies: ["ActionsErrorDemo"],
             resources: [
-                .copy("image.png")
+                .copy("Snapshot Images/image.png")
             ]),
     ]
 )
