@@ -1,0 +1,22 @@
+---
+name: ActionsErrorDemo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  xcodebuild:
+    name: xcodebuild error demo
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build & Test
+        run: |
+          xcodebuild \
+            -scheme ActionsErrorDemo \
+            -sdk "macosx13.1" \
+            -destination "platform=macOS" \
+            clean test;
