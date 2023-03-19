@@ -6,14 +6,20 @@ let package = Package(
     products: [
         .library(name: "ActionsErrorDemo", targets: ["ActionsErrorDemo"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/GEOSwift/geos.git", from: "8.1.0")
+    ],
     targets: [
-        .target(name: "ActionsErrorDemo"),
+        .target(name: "ActionsErrorDemo",
+                dependencies: ["geos"]
+        ),
         .testTarget(
             name: "ActionsErrorDemoTests",
             dependencies: ["ActionsErrorDemo"],
             resources: [
                 .copy("Snapshot Images/envelope.png"),
                 .copy("Snapshot Images/geometrycollection.png"),
-            ]),
+            ]
+        ),
     ]
 )
