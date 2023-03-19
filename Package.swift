@@ -5,13 +5,15 @@ let package = Package(
     name: "ActionsErrorDemo",
     products: [
         .library(name: "ActionsErrorDemo", targets: ["ActionsErrorDemo"]),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/GEOSwift/GEOSwift.git", from: "10.0.0")
+        .library(name: "ActionsErrorDemoDependency", type: .dynamic, targets: ["ActionsErrorDemoDependency"]),
     ],
     targets: [
-        .target(name: "ActionsErrorDemo",
-                dependencies: ["GEOSwift"]
+        .target(
+            name: "ActionsErrorDemo",
+            dependencies: ["ActionsErrorDemoDependency"]
+        ),
+        .target(
+            name: "ActionsErrorDemoDependency"
         ),
         .testTarget(
             name: "ActionsErrorDemoTests",

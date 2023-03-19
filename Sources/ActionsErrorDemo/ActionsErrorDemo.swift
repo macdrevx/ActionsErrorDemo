@@ -1,4 +1,7 @@
+import ActionsErrorDemoDependency
+
 public struct ActionsErrorDemo {
-    func run() {
+    public func run() {
+        ActionsErrorDemoDependency().run()
     }
 }
