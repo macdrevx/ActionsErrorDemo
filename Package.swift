@@ -12,7 +12,8 @@ let package = Package(
             name: "ActionsErrorDemoTests",
             dependencies: ["ActionsErrorDemo"],
             resources: [
-                .copy("Snapshot Images/image.png")
+                .copy("Snapshot Images/image.png"),
+                .copy("Snapshot Images/image2.png"),
             ]),
     ]
 )
