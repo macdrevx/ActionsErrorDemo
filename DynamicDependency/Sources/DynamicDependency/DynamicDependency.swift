@@ -1,4 +1,4 @@
-public struct ActionsErrorDemoDependency {
+public struct DynamicDependency {
     public init() {
     }
 

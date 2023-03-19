@@ -5,15 +5,14 @@ let package = Package(
     name: "ActionsErrorDemo",
     products: [
         .library(name: "ActionsErrorDemo", targets: ["ActionsErrorDemo"]),
-        .library(name: "ActionsErrorDemoDependency", type: .dynamic, targets: ["ActionsErrorDemoDependency"]),
+    ],
+    dependencies: [
+        .package(path: "../DynamicDependency")
     ],
     targets: [
         .target(
             name: "ActionsErrorDemo",
-            dependencies: ["ActionsErrorDemoDependency"]
-        ),
-        .target(
-            name: "ActionsErrorDemoDependency"
+            dependencies: ["DynamicDependency"]
         ),
         .testTarget(
             name: "ActionsErrorDemoTests",
