@@ -63,7 +63,7 @@ jobs:
       - name: Build & Test
         run: |
           set -o pipefail && xcodebuild \
-            -scheme ActionsErrorDemo \
+            -scheme ActionsErrorDemo-Package \
             -sdk "${{ matrix.sdk }}" \
             -destination "${{ matrix.destination }}" \
             clean test | xcpretty -c;
