@@ -7,11 +7,11 @@ let package = Package(
         .library(name: "ActionsErrorDemo", targets: ["ActionsErrorDemo"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/GEOSwift/geos.git", from: "8.1.0")
+        .package(url: "https://github.com/GEOSwift/GEOSwift.git", from: "10.0.0")
     ],
     targets: [
         .target(name: "ActionsErrorDemo",
-                dependencies: ["geos"]
+                dependencies: ["GEOSwift"]
         ),
         .testTarget(
             name: "ActionsErrorDemoTests",
