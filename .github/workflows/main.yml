@@ -58,12 +58,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer
-      - name: Install xcpretty
-        run: gem install xcpretty
       - name: Build & Test
         run: |
-          set -o pipefail && xcodebuild \
+          xcodebuild \
             -scheme ActionsErrorDemo \
             -sdk "${{ matrix.sdk }}" \
             -destination "${{ matrix.destination }}" \
-            clean test | xcpretty -c;
+            clean test;
