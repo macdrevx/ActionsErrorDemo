@@ -7,12 +7,12 @@ let package = Package(
         .library(name: "ActionsErrorDemo", targets: ["ActionsErrorDemo"]),
     ],
     dependencies: [
-        .package(path: "../DynamicDependency")
+        .package(path: "../geos")
     ],
     targets: [
         .target(
             name: "ActionsErrorDemo",
-            dependencies: ["DynamicDependency"]
+            dependencies: ["geos"]
         ),
         .testTarget(
             name: "ActionsErrorDemoTests",
