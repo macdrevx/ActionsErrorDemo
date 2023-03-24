@@ -62,7 +62,7 @@ jobs:
         run: gem install xcpretty
       - name: Build & Test
         run: |
-          cd Primary && set -o pipefail && xcodebuild \
+          set -o pipefail && xcodebuild \
             -scheme ActionsErrorDemo \
             -sdk "${{ matrix.sdk }}" \
             -destination "${{ matrix.destination }}" \
