@@ -7,12 +7,12 @@ let package = Package(
         .library(name: "ActionsErrorDemo", targets: ["ActionsErrorDemo"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/GEOSwift/geos.git", .branchItem("actions-error-demo"))
+        .package(url: "https://github.com/macdrevx/ActionsErrorDemoDependency.git", .branchItem("main"))
     ],
     targets: [
         .target(
             name: "ActionsErrorDemo",
-            dependencies: ["geos"]
+            dependencies: ["ActionsErrorDemoDependency"]
         ),
         .testTarget(
             name: "ActionsErrorDemoTests",

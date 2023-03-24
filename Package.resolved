@@ -2,11 +2,11 @@
   "object": {
     "pins": [
       {
-        "package": "geos",
-        "repositoryURL": "https://github.com/GEOSwift/geos.git",
+        "package": "ActionsErrorDemoDependency",
+        "repositoryURL": "https://github.com/macdrevx/ActionsErrorDemoDependency.git",
         "state": {
-          "branch": "actions-error-demo",
-          "revision": "73e3ef456ff6cc7177d43fa6d6bbe4fe398f60e3",
+          "branch": "main",
+          "revision": "e864e5a6812c696245b7539536eff151123d901a",
           "version": null
         }
       }
