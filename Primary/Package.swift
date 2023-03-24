@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "ActionsErrorDemo", targets: ["ActionsErrorDemo"]),
     ],
     dependencies: [
-        .package(path: "../geos")
+        .package(url: "https://github.com/GEOSwift/geos.git", from: "8.1.0")
     ],
     targets: [
         .target(
